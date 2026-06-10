@@ -117,7 +117,7 @@ const gasthofLuggau: CampsiteConfig = {
       "Wähle Zeitraum und Personen — die Familie Oberluggauer meldet sich persönlich mit deiner Verfügbarkeit und den aktuellen Preisen.",
     pricesArePlaceholder: true,
     priceNote:
-      "Richtpreise — auf der Website sind keine Campingpreise angegeben (alle Preise „auf Anfrage"). Bitte bestätigen. Endpreise zzgl. Ortstaxe.",
+      "Richtpreise — auf der Website sind keine Campingpreise angegeben (alle Preise „auf Anfrage“). Bitte bestätigen. Endpreise zzgl. Ortstaxe.",
     highlight: {
       title: "Mitten in der Natur",
       text: "Zwischen Karnischen Alpen und Lienzer Dolomiten — Wandern, Wildwasser und Ruhe direkt am Platz.",

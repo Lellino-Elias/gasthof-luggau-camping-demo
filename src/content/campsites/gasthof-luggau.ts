@@ -22,7 +22,6 @@ const gasthofLuggau: CampsiteConfig = {
   brandKind: "Gasthof & Camping",
   regionLong: "Lesachtal · Kärnten · Österreich",
 
-  theme: "schiefer",
   heroVariant: "center",
 
   claim: "Camping auf zwei Sonnenterrassen im Lesachtal",
@@ -129,7 +128,6 @@ const gasthofLuggau: CampsiteConfig = {
   },
 
   kontakt: {
-    coords: { lat: 46.705557, lng: 12.734849 },
     tel: "+43 4716 209",
     telHref: "tel:+434716209",
     mail: "gasthof-luggau@aon.at",

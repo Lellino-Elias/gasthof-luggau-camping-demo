@@ -30,8 +30,8 @@ const gasthofLuggau: CampsiteConfig = {
     "Auf 1.140 m, zwischen den Karnischen Alpen und den Lienzer Dolomiten, findest du unseren Campingplatz auf zwei südseitigen Terrassen — ruhig, naturbelassen und voller Bergluft.",
 
   statement: {
-    text: "Bei uns campst du mitten in der Natur — und am Abend kocht der Chef noch selbst.",
-    emphasis: "der Chef noch selbst",
+    text: "Bei uns campst du mitten in der Natur — und am Abend kommen Lesachtaler Spezialitäten aus eigener Küche auf den Tisch.",
+    emphasis: "Lesachtaler Spezialitäten aus eigener Küche",
   },
 
   // Keine geeigneten Motiv-Fotos in der Library → Pillar-Block blendet sich aus (BrandStatement return null).

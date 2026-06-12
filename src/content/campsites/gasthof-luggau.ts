@@ -128,6 +128,7 @@ const gasthofLuggau: CampsiteConfig = {
   },
 
   kontakt: {
+    coords: { lat: 46.703958, lng: 12.741422 },
     tel: "+43 4716 209",
     telHref: "tel:+434716209",
     mail: "gasthof-luggau@aon.at",

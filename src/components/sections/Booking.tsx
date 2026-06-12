@@ -65,7 +65,9 @@ export default function Booking() {
   const cat = categories.find((c) => c.id === catId) ?? categories[0];
   const nights = nightsBetween(arrival, departure);
   const extra = Math.max(0, guests - 2) * (cat?.perExtraGuest ?? 0);
-  const total = cat ? (cat.perNight + extra) * nights : 0;
+  // Ohne perNight (Quelle nennt keine lesbaren Preise) gibt es keine Summe — ehrlich „auf Anfrage".
+  const priceKnown = cat?.perNight != null;
+  const total = priceKnown ? ((cat?.perNight ?? 0) + extra) * nights : 0;
   const animatedTotal = useTween(total);
 
   const field = "w-full rounded-xl border border-line bg-bg2 px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold/60";
@@ -145,7 +147,11 @@ export default function Booking() {
                     >
                       <span className="block text-sm font-semibold text-ink">{c.label}</span>
                       <span className="mt-1 block text-xs text-muted">
-                        ab <span className="font-display text-base font-bold text-gold">{eur(c.perNight)}</span> / Nacht
+                        {c.perNight != null ? (
+                          <>ab <span className="font-display text-base font-bold text-gold">{eur(c.perNight)}</span> / Nacht</>
+                        ) : (
+                          <span className="font-display text-base font-bold text-gold">auf Anfrage</span>
+                        )}
                       </span>
                     </button>
                   );
@@ -159,7 +165,7 @@ export default function Booking() {
                     Gesamt · {cat?.label ?? "Anfrage"} · {guests} Pers. · {nights} {nights === 1 ? "Nacht" : "Nächte"}
                   </span>
                   <div className="font-display mt-1 text-4xl sm:text-5xl font-extrabold tracking-tight text-ink">
-                    {eur(animatedTotal)}
+                    {priceKnown ? eur(animatedTotal) : "auf Anfrage"}
                   </div>
                   <span className="mt-1 block text-xs leading-snug text-muted">{pricesArePlaceholder ? "Unverbindlicher Richtpreis · noch nicht final bestätigt" : priceNote}</span>
                 </div>

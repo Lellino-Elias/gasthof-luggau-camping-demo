@@ -70,7 +70,7 @@ const gasthofLuggau: CampsiteConfig = {
   // scharfe, sonnenbeschienene Schneefläche — motivarm, aber als atmosphärische Wintertextur
   // im Hintergrund rollengerecht.
   breather: {
-    image: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Frisch verschneite, sonnenbeschienene Winterlandschaft im Lesachtal" },
+    image: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Kristalline, sonnenbeschienene Schneeoberfläche mit blauen Schatten im Lesachtal" },
     line: "Das Lesachtal — Natur pur, von der Sommerwiese bis zum verschneiten Winter.",
   },
 

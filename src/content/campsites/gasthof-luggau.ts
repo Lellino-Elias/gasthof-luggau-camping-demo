@@ -55,22 +55,22 @@ const gasthofLuggau: CampsiteConfig = {
 
   awards: [],
 
-  saison: { von: "Jänner", bis: "Dezember" },
+  // Saisonangabe entfernt: Campingseite (02.md) nennt keine Saisondaten; kein Quellenbeleg
+  // für ganzjährigen Campingbetrieb. (verify2-Issue: saison ohne Quellenbeleg.)
 
-  // Sommerwiesen-Aufnahme (hintergrund_sommer.jpg) als Hero: alpine Blumenwiese mit weißen
-  // Margeriten — das EIGENE Startseiten-Hintergrundbild der Quelle (01.md, "Hintergrund, preload").
-  // Hat im Gegensatz zur Winter-Schneefläche ein echtes Motiv → tragfähiger als Hero.
+  // Winteraufnahme (hintergrund_winter1.jpg, gasthof-luggau.at/winterurlaub.html) als Hero:
+  // scharf, kristalline Schneefläche mit guten Kontrast-Schatten — visuell stärker als die
+  // überbelichtete/ausgewaschene Sommerwiese. Beide Fotos heroOk, eigene Domain.
   // Bildarmer Lead (nur 2 Fotos ≥ 1920 px auf eigener Domain); Enrichment wurde versucht
   // (.enriched-marker), kein besseres Motiv-Foto gefunden.
   hero: {
-    aerial: { src: `${IMG}/gallery-0d7e12ca25.webp`, alt: "Blühende Margeritenwiese auf der Alm im Lesachtaler Sommer bei Maria Luggau" },
+    aerial: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Kristalline, sonnenbeschienene Schneeoberfläche mit blauen Schatten im Lesachtal bei Maria Luggau" },
   },
 
-  // Winteraufnahme (hintergrund_winter1.jpg, gasthof-luggau.at/winterurlaub.html) als Breather:
-  // scharfe, sonnenbeschienene Schneefläche — motivarm, aber als atmosphärische Wintertextur
-  // im Hintergrund rollengerecht.
+  // Sommerwiesen-Aufnahme (hintergrund_sommer.jpg) als Breather: alpine Blumenwiese mit
+  // weißen Margeriten — als atmosphärische Sommertextur hinter der Breather-Zeile passend.
   breather: {
-    image: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Kristalline, sonnenbeschienene Schneeoberfläche mit blauen Schatten im Lesachtal" },
+    image: { src: `${IMG}/gallery-0d7e12ca25.webp`, alt: "Blühende Margeritenwiese im Lesachtaler Sommer bei Maria Luggau" },
     line: "Das Lesachtal — Natur pur, von der Sommerwiese bis zum verschneiten Winter.",
   },
 

@@ -191,6 +191,7 @@ export default function Booking() {
           <Reveal delay={120}>
             <div className="h-full rounded-[2.4rem] bg-ink/[0.045] p-2 ring-1 ring-ink/10">
             <div className="flex h-full flex-col gap-5 rounded-[calc(2.4rem-0.5rem)] border border-line bg-bg2 p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] md:p-8">
+              {campsite.saison && (<>
               <div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-muted">Saison</span>
                 <p className="font-display mt-1 text-xl font-bold text-ink">
@@ -198,6 +199,7 @@ export default function Booking() {
                 </p>
               </div>
               <div className="h-px bg-line" />
+              </>)}
               <div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-muted">Inklusive</span>
                 <ul className="mt-3 space-y-2">

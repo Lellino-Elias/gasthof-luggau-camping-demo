@@ -78,7 +78,7 @@ export interface CampsiteConfig {
   /** Vertrauens-Band: Überschrift + ehrlicher Einleitungstext. */
   trust: { heading: string; headingEmphasis: string; intro: string };
   awards: { label: string; image?: ImageRef }[];
-  saison: { von: string; bis: string };
+  saison?: { von: string; bis: string };   // optional — manche Quellen nennen keine Saison (nichts erfinden!)
   hero: { aerial: ImageRef; sunset?: ImageRef };
   /** Optional: EIN starkes, sonst ungenutztes Querformat-Bild als Full-Bleed-Atempause
    *  zwischen den Sektionen (+ optional eine kurze, belegte Zeile). Fehlt → keine Sektion. */

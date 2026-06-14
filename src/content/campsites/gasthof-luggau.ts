@@ -88,7 +88,7 @@ const gasthofLuggau: CampsiteConfig = {
     features: [
       {
         title: "Unser Gasthof im Lesachtal",
-        text: "Familiär geführt auf 1.140 m: das Haus liegt sonnig am Hang, eingebettet zwischen Bergwiesen und Wald — der Campingplatz beginnt direkt vor der Tür.",
+        text: "Familiär geführt auf 1.140 m: das Haus liegt sonnig zwischen Bergwiesen und Wald — der Campingplatz direkt vor der Tür.",
         image: { src: `${IMG}/gallery-96d10c2ee0.webp`, alt: "Gasthof Luggau am sonnigen Berghang über Maria Luggau, umgeben von Bergwiesen und Wald" },
       },
       {

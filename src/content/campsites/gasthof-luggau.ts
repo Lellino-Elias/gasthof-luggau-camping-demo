@@ -5,11 +5,15 @@ import type { CampsiteConfig } from "../types";
  * Familiär geführter Gasthof mit Campingplatz auf zwei südseitigen Terrassen, 1.140 m.
  * Quelle: leads/gasthof-luggau/raw/digest. 100 % quellbelegt; Du-Anrede durchgehend.
  *
- * ⚠️ BILDARMER LEAD: Auf der Quelle sind nur 2 echte Fotos ≥ 800 px vorhanden
- * (verblasstes Sommer-Bergwiesen-Hero + Winter-Schneefläche). Alle echten Motiv-Fotos
- * existieren nur als 767-px-„schleife"-Streifen (tooSmall) bzw. als Website-Layout-Grafiken.
- * Daher: pillars / camping.features / galerie leer → Sektionen blenden sich ehrlich aus.
- * Siehe REPORT.md → Tier-1b-Foto-Enrichment nötig, bevor dies als Premium-Demo taugt.
+ * ⚠️ BILDARMER LEAD: Auf der eigenen Domain (gasthof-luggau.at) gibt es nur 2 Fotos ≥ 1000 px
+ * (Sommer-Bergwiesen + Winter-Schneefläche, beide als Hero/Breather genutzt). Alle weiteren
+ * echten Motiv-Fotos liegen nur als 767-px-„schleife"-Panorama-Crops vor. Aus diesen wurden
+ * die schärfsten EINZELbild-Crops kuratiert für camping.features (Gasthof/Terrasse/Stube) und
+ * galerie (Sommer-/Winter-Panoramen). pillars bleiben leer (keine weiteren starken Einzelbilder
+ * ohne Doppelung) → Pillar-Block blendet sich ehrlich aus.
+ * Der Nach-Scrape lieferte zwar viele hochwertige Fotos, diese stammen aber von FREMDEN
+ * Plätzen (camping.info / campercontact: alpencamp-kärnten, alpenferienpark-reisach,
+ * camping-am-waldbad, panorama-camping-lesachtal u. a.) → als Stock/Fremdfotos NICHT verwendet.
  */
 const IMG = "/campsites/gasthof-luggau";
 
@@ -34,7 +38,8 @@ const gasthofLuggau: CampsiteConfig = {
     emphasis: "Lesachtaler Spezialitäten aus eigener Küche",
   },
 
-  // Keine geeigneten Motiv-Fotos in der Library → Pillar-Block blendet sich aus (BrandStatement return null).
+  // Keine weiteren starken Einzelbild-Fotos auf eigener Domain übrig (ohne Doppelung mit
+  // camping.features/galerie) → Pillar-Block blendet sich ehrlich aus (BrandStatement return null).
   pillars: [],
 
   usps: [
@@ -78,8 +83,25 @@ const gasthofLuggau: CampsiteConfig = {
     heading: "Camping zwischen Alpen und Dolomiten",
     intro:
       "Auf zwei südseitigen Terrassen, mitten in der Natur: Ausgangspunkt für Wanderungen, Wallfahrten und Wildwasser an der Gail — und doch mit allem Komfort, den du brauchst.",
-    // Keine geeigneten Foto-Motive in der Library → CampingFeatures blendet sich aus (return null).
-    features: [],
+    // Nach-Scrape: eigene Website-Fotos (gasthof-luggau.at/pic/*) — scharfe Panorama-Crops
+    // (767 px breit, einzelbildig, keine Stock-/Fremdfotos). Erstes = große Kachel.
+    features: [
+      {
+        title: "Unser Gasthof im Lesachtal",
+        text: "Familiär geführt auf 1.140 m: das Haus liegt sonnig am Hang, eingebettet zwischen Bergwiesen und Wald — der Campingplatz beginnt direkt vor der Tür.",
+        image: { src: `${IMG}/gallery-96d10c2ee0.webp`, alt: "Gasthof Luggau am sonnigen Berghang über Maria Luggau, umgeben von Bergwiesen und Wald" },
+      },
+      {
+        title: "Sonnenterrasse & Garten",
+        text: "Im Garten unter Schirmen sitzt du mit Blick ins Tal — der gemütliche Treffpunkt nach einem Tag in den Bergen.",
+        image: { src: `${IMG}/gallery-3655bb7122.webp`, alt: "Gartenterrasse des Gasthof Luggau mit Sonnenschirmen, Tischen und Talblick" },
+      },
+      {
+        title: "Lesachtaler Spezialitäten",
+        text: "In der gemütlichen Stube kommen am Abend Spezialitäten aus eigener Küche auf den gedeckten Tisch.",
+        image: { src: `${IMG}/gallery-0215693f2f.webp`, alt: "Gemütliche Gaststube im Gasthof Luggau mit gedeckten Tischen und Blick ins Grüne" },
+      },
+    ],
   },
 
   anreise: {
@@ -100,13 +122,18 @@ const gasthofLuggau: CampsiteConfig = {
     ],
   },
 
-  // Keine geeigneten Foto-Motive übrig → Galerie blendet sich aus (return null bei < 4 Bildern).
+  // Nach-Scrape: vier scharfe Einzelbild-Panoramen von der eigenen Website (gasthof-luggau.at/pic/*).
   galerie: {
     heading: "Rund um Maria Luggau",
     headingEmphasis: "Maria Luggau",
     intro: "Bergwiesen, Wildwasser und verschneite Winter — ein paar Eindrücke aus dem Lesachtal.",
     tag: "Sommer & Winter",
-    images: [],
+    images: [
+      { src: `${IMG}/gallery-805dd69a5b.webp`, alt: "Grünes Lesachtal mit verstreuten Bergbauernhöfen und Berghängen im Sommer" },
+      { src: `${IMG}/gallery-6606d7b797.webp`, alt: "Sonniges Schneepanorama über den verschneiten Gipfeln rund um Maria Luggau" },
+      { src: `${IMG}/gallery-3ca5a0cbc8.webp`, alt: "Verschneites Lesachtal mit Bergbauernhöfen und Bergkette im Winter" },
+      { src: `${IMG}/gallery-7d3d759833.webp`, alt: "Bergstraße im Lesachtal im warmen Abendlicht, mit Bildstock am Wegrand" },
+    ],
   },
 
   booking: {

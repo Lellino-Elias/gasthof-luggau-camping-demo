@@ -69,13 +69,13 @@ const gasthofLuggau: CampsiteConfig = {
   // Bildarmer Lead (nur 2 Fotos ≥ 1920 px auf eigener Domain); Enrichment wurde versucht
   // (.enriched-marker), kein besseres Motiv-Foto gefunden.
   hero: {
-    aerial: { src: `${IMG}/gallery-0d7e12ca25.webp`, alt: "Blühende Margeritenwiese im Lesachtaler Sommer bei Maria Luggau" },
+    aerial: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Kristalline, sonnenbeschienene Schneeoberfläche mit blauen Schatten im Lesachtal bei Maria Luggau" },
   },
 
   // Sommerwiesen-Aufnahme (hintergrund_sommer.jpg) als Breather: alpine Blumenwiese mit
   // weißen Margeriten — als atmosphärische Sommertextur hinter der Breather-Zeile passend.
   breather: {
-    image: { src: `${IMG}/gallery-408a04e3a3.webp`, alt: "Kristalline, sonnenbeschienene Schneeoberfläche mit blauen Schatten im Lesachtal bei Maria Luggau" },
+    image: { src: `${IMG}/gallery-0d7e12ca25.webp`, alt: "Blühende Margeritenwiese im Lesachtaler Sommer bei Maria Luggau" },
     line: "Das Lesachtal — Natur pur, von der Sommerwiese bis zum verschneiten Winter.",
   },
 
